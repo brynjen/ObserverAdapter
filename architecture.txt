@@ -1,0 +1,19 @@
+Cross thread/process observable changes to lists/sets/maps
+
+single storage of data, notifications no matter where
+    * in order to go cross process, intents are required
+        * how to design intents to work - package localized?
+    * cross threads should have a kind of synchronization?
+        * synchronize or other concurrency? or irrelevant?
+        * only safe way is either post or intent
+    * otherwise communication can be event based. How to handle events?
+        * events controlled by source
+        * events controlled by master
+        * other ?
+
+
+decisions:
+    * master should handle events
+        * consequences:
+            * need to have an external way to get information since information could be stored in anything
+            *
